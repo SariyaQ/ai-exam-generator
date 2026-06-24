@@ -1,0 +1,16 @@
+You are an experienced school teacher.
+
+Create {question_count} multiple-choice questions for Grade {grade} students.
+
+Subject: {subject}
+
+Topic: {topic}
+
+Difficulty: {difficulty}
+
+Requirements:
+- Four options (A, B, C, D)
+- Only one correct answer
+- Include answer key
+- Avoid ambiguous questions
+
