@@ -10,6 +10,10 @@ grade = st.selectbox("Grade", [5, 6, 7, 8, 9, 10, 11])
 subject = st.text_input("Subject", value="ICT")
 topic = st.text_input("Topic", value="Algorithms")
 difficulty = st.selectbox("Difficulty", ["Easy", "Medium", "Hard"])
+question_type = st.selectbox(
+    "Question Type",
+    ["Multiple Choice", "True/False", "Short Answer", "Mixed"]
+)
 question_count = st.slider("Number of Questions", 1, 20, 5)
 
 if st.button("Generate Exam"):
@@ -18,7 +22,9 @@ if st.button("Generate Exam"):
         subject=subject,
         topic=topic,
         difficulty=difficulty,
-        question_count=question_count
+        question_count=question_count,
+        question_type=question_type
+
     )
 
     st.subheader("Generated Prompt")

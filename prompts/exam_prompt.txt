@@ -5,6 +5,7 @@ Create {question_count} multiple-choice questions for Grade {grade} students.
 Subject: {subject}
 Topic: {topic}
 Difficulty: {difficulty}
+Question Type: {question_type}
 
 Requirements:
 - Four options: A, B, C, D
@@ -12,6 +13,9 @@ Requirements:
 - Avoid ambiguous questions
 - Include a short explanation for each answer
 - Questions must be appropriate for the grade level
+- Follow the selected question type strictly
+- If question type is Mixed, include a balanced combination of multiple-choice, true/false, and short-answer questions
+
 
 Return ONLY valid JSON in the following structure:
 
