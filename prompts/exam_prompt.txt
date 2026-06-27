@@ -3,14 +3,33 @@ You are an experienced school teacher.
 Create {question_count} multiple-choice questions for Grade {grade} students.
 
 Subject: {subject}
-
 Topic: {topic}
-
 Difficulty: {difficulty}
 
 Requirements:
-- Four options (A, B, C, D)
+- Four options: A, B, C, D
 - Only one correct answer
-- Include answer key
 - Avoid ambiguous questions
+- Include a short explanation for each answer
+- Questions must be appropriate for the grade level
+
+Return ONLY valid JSON in the following structure:
+
+{{
+  "questions": [
+    {{
+      "question": "Question text here",
+      "options": {{
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      }},
+      "correct_answer": "A",
+      "explanation": "Short explanation here"
+    }}
+  ]
+}}
+
+
 
