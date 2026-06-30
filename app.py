@@ -1,7 +1,7 @@
 import streamlit as st
 from src.prompt_builder import build_prompt
 from src.openai_client import generate_exam
-
+from src.pdf_generator import generate_pdf
 st.title("AI Exam Generator")
 
 st.write("Generate structured exam questions for teachers.")
@@ -52,6 +52,14 @@ for q in exam.questions:
     )
 
     st.divider()
+    pdf = generate_pdf(exam)
+
+st.download_button(
+    label="📄 Download PDF",
+    data=pdf,
+    file_name="AI_Exam.pdf",
+    mime="application/pdf",
+)
 
 
 
