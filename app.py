@@ -34,7 +34,24 @@ if st.button("Generate Exam"):
         exam = generate_exam(prompt)
 
     st.subheader("Generated Exam")
-    st.write(exam)
+
+for q in exam.questions:
+    st.markdown(f"### Question {q.id}")
+    st.write(q.question)
+
+    st.write(f"A. {q.options.A}")
+    st.write(f"B. {q.options.B}")
+    st.write(f"C. {q.options.C}")
+    st.write(f"D. {q.options.D}")
+
+    st.success(f"Correct Answer: {q.correct_answer}")
+    st.info(f"Explanation: {q.explanation}")
+
+    st.caption(
+        f"Topic: {q.topic} | Difficulty: {q.difficulty} | Bloom Level: {q.bloom_level}"
+    )
+
+    st.divider()
 
 
 
